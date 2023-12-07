@@ -1,44 +1,54 @@
 <menu class="menu">
   <figure class="menu__hero-section">
-    <div class="menu__hero-section__image-ring">
-      <img src="./img/profil-laurentiu.jpg" alt="Laurentiu" />
+    <div class="menu__hero-section__image-shadow">
+      <div class="menu__hero-section__image-ring">
+        <img src="./img/profil-laurentiu.jpg" alt="Laurentiu" />
+      </div>
     </div>
-    <figcaption>
-      <a href="https://www.facebook.com" target="_blank"> Laurentiu </a>
+    <figcaption class="menu__hero-section__caption">
+      <a href="https://www.facebook.com" target="_blank">
+        Laurențiu
+        <svg width="8" height="10">
+          <use href="./img/icons.svg#simple-arrow-1"></use>
+        </svg>
+      </a>
     </figcaption>
   </figure>
 
   <!-- Navbar -->
-  <nav>
+  <nav class="menu__navbar">
     <ul>
       <li>
-        <a>
-          <svg height="20" width="20" class="">
-            <use href="./img/icons.svg#form-person"></use>
+        <a href="./index.html#schedule">
+          <svg height="20" width="20">
+            <use href="./img/icons.svg#menu-schedule"></use>
           </svg>
           Programe
+          <svg width="8" height="10" style="color: #818181; margin-left: 8px">
+            <use href="./img/icons.svg#simple-arrow-1"></use>
+          </svg>
         </a>
       </li>
       <li>
-        <a>
-          <svg height="20" width="20" class="">
-            <use></use>
+        <a href="./index.html#notifications">
+          <svg height="20" width="20">
+            <use href="./img/icons.svg#menu-notifications"></use>
           </svg>
           Notificări
         </a>
       </li>
       <li>
-        <a>
-          <svg height="20" width="20" class="">
-            <use></use>
+        <a href="./index.html#settings">
+          <svg height="20" width="20">
+            <use href="./img/icons.svg#menu-settings"></use>
           </svg>
           Setări
         </a>
       </li>
-      <li>
-        <a>
-          <svg height="20" width="20" class="">
-            <use></use>
+      <li class="menu__navbar__log-out">
+        <a href="./index.html#log-out">
+          <svg height="20" width="20">
+            <use href="./img/icons.svg#log-out"></use>
           </svg>
           Deconectați-vă
         </a>
