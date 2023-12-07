@@ -227,16 +227,6 @@ body {
 .menu__hero-section:hover, .menu__hero-section:focus {
   cursor: pointer;
 }
-
-.side-menu-button {
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  z-index: 10000;
-  position: absolute;
-
 .menu__navbar {
   height: 78%;
 }
@@ -269,4 +259,14 @@ body {
 }
 .menu__navbar ul li a:hover, .menu__navbar ul li a:focus {
   color: #515151;
+}
+
+.side-menu-button {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  z-index: 10000;
+  position: absolute;
 }
