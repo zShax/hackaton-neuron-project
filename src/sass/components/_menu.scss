@@ -1,0 +1,41 @@
+.menu {
+  font-size: 14px;
+
+  // Profile hero section, clickable
+  &__hero-section {
+    $img-size: 61px;
+    $ring-padding: 5px;
+    $border-size: 1px;
+
+    width: max-content;
+
+    &__image-ring {
+      position: relative;
+
+      width: calc($img-size + $ring-padding);
+      height: calc($img-size + $ring-padding);
+
+      border: $border-size solid red;
+      border-radius: $img-size;
+
+      padding: $ring-padding;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: $img-size;
+        height: $img-size;
+
+        border-radius: $img-size;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+  }
+}

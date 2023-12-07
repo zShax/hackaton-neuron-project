@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
     <link rel="stylesheet" href="./css/main.min.css" />
-    <script type="module" src="./js/index.js"></script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <!-- Main Map on Screen -->
+    <main class="screen-map">
+      <!-- Menu -->
+      <include src="./partials/menu.html"></include>
+    </main>
+
+    <!-- Index.js -->
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>

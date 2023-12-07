@@ -1,2 +1,10 @@
-@import './common';
-@import './example';
+// Normalizer, Variables
+@import './utils/reset';
+@import './utils/vars';
+
+// Components
+@import './components/screen-map';
+@import './components/menu';
+@import './components/menu-button';
+@import './components/filter-button';
+@import './components/settings';

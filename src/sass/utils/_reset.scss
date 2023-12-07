@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+
 html,
 body,
 div,
@@ -90,7 +91,6 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -105,74 +105,35 @@ nav,
 section {
   display: block;
 }
-
 body {
   line-height: 1;
 }
-
 ol,
 ul {
   list-style: none;
 }
-
 blockquote,
 q {
   quotes: none;
 }
-
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
+// Border Box
 html {
   box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
   box-sizing: inherit;
-}
-
-.screen-map {
-  height: 100vh;
-  width: 100%;
-  background-image: url(../img/test-map.jpg);
-}
-
-.menu {
-  font-size: 14px;
-}
-.menu__hero-section {
-  width: -moz-max-content;
-  width: max-content;
-}
-.menu__hero-section__image-ring {
-  position: relative;
-  width: 66px;
-  height: 66px;
-  border: 1px solid red;
-  border-radius: 61px;
-  padding: 5px;
-}
-.menu__hero-section__image-ring img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 61px;
-  height: 61px;
-  border-radius: 61px;
-}
-.menu__hero-section:hover, .menu__hero-section:focus {
-  cursor: pointer;
 }
