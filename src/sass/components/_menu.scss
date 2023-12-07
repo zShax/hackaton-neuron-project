@@ -1,5 +1,8 @@
 .menu {
   font-size: 14px;
+  width: 57%;
+  height: 100%;
+  background-color: #fff;
 
   // Profile hero section, clickable
   &__hero-section {
@@ -7,32 +10,77 @@
     $ring-padding: 5px;
     $border-size: 1px;
 
-    width: max-content;
+    background-color: red;
 
-    &__image-ring {
-      position: relative;
+    @include flex(column, center, center);
+    width: 100%;
+    height: 22%;
 
-      width: calc($img-size + $ring-padding);
-      height: calc($img-size + $ring-padding);
+    // Image and its effects
+    &__image {
+      &-shadow {
+        display: flex;
+        justify-content: center;
 
-      border: $border-size solid red;
-      border-radius: $img-size;
+        background-image: linear-gradient(
+          180deg,
+          #09f 0%,
+          rgba(93, 185, 246, 0.01) 0.01%,
+          #95d5ff 100%
+        );
 
-      padding: $ring-padding;
-
-      img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        width: $img-size;
-        height: $img-size;
+        // size is 35% bigger than the size of the image
+        width: calc($img-size * 135 / 100);
+        height: calc($img-size * 135 / 100);
 
         border-radius: $img-size;
       }
+
+      &-ring {
+        position: relative;
+
+        width: calc($img-size + $ring-padding);
+        height: calc($img-size + $ring-padding);
+
+        border: $border-size solid $secondary-blue;
+        border-radius: $img-size;
+
+        padding: $ring-padding;
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          width: $img-size;
+          height: $img-size;
+
+          border-radius: $img-size;
+        }
+      }
     }
 
+    // Caption text
+    &__caption {
+      font-size: 14px;
+
+      margin-top: 10px;
+
+      a,
+      a:visited {
+        color: #000;
+        font-weight: 700;
+        line-height: normal;
+        text-decoration: none;
+
+        svg {
+          margin-left: 5px;
+        }
+      }
+    }
+
+    // Clickable profile
     &:hover,
     &:focus {
       cursor: pointer;
