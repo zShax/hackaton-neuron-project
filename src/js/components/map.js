@@ -7,31 +7,41 @@ import { baseURL } from "../index";
 uwuArray = [];
 
 let tramIcon = L.icon({
-    iconUrl: require("../../img/victorious.png"),
+    iconUrl: require("../../img/orange-circle.png"),
 
-    iconSize:     [50, 50], // size of the icon
-    shadowSize:   [50, 64], // size of the shadow
-    iconAnchor:   [5, 5], // point of the icon which will correspond to marker's location
-    shadowAnchor: [4, 62],  // the same for the shadow
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-
+    iconSize:     [14, 14], // size of the icon
+    iconAnchor:   [7, 7],   // point of the icon which will correspond to marker's location
 });
 
-let tram = L.marker([46.192717706185675, 21.30671085657869], {icon: tramIcon}).addTo(map);
+let tram = L.marker([46.192717706185675, 21.30671085657869], {icon: tramIcon});
 
+tram.bindTooltip()
 
 function updateLocation()
 {
     if(uwuArray.length > 0)
-    {
+    {  
+        map.addLayer(tram);
+
         console.log(uwuArray);
 
+        let name = uwuArray[0].name;
         let latitude = uwuArray[0].latitude;
         let longitude = uwuArray[0].longitude;
-
         let newLatLng = new L.LatLng(latitude, longitude);
         
         tram.setLatLng(newLatLng); 
+
+        if(tram.getTooltip() != undefined)
+        {
+            tram.setTooltipContent(
+            'Numar: ' + name
+            + '<br>' +
+            'Latitude: ' + latitude
+            + '<br>' +
+            'Longitude: ' + longitude
+            );
+        }
     }
 }
 
