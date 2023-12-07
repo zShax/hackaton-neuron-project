@@ -1,6 +1,11 @@
 // Normalizer, Variables
 @import './utils/reset';
 @import './utils/vars';
+@import './utils/fonts';
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+@import './utils/mixins';
 
 // Components
 @import './components/screen-map';
