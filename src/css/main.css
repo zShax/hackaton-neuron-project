@@ -146,10 +146,12 @@ html {
 .screen-map {
   height: 100vh;
   width: 100%;
-  background-image: url(../img/test-map.jpg);
 }
 
 .menu {
+  display: none;
+  position: absolute;
+  z-index: 10000;
   font-size: 14px;
 }
 .menu__hero-section {
@@ -175,4 +177,14 @@ html {
 }
 .menu__hero-section:hover, .menu__hero-section:focus {
   cursor: pointer;
+}
+
+.side-menu-button {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  z-index: 10000;
+  position: absolute;
 }
