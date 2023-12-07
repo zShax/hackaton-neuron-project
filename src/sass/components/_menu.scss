@@ -1,5 +1,6 @@
 .menu {
   font-size: 14px;
+  line-height: normal;
   width: 57%;
   height: 100%;
   background-color: #fff;
@@ -10,7 +11,11 @@
     $ring-padding: 5px;
     $border-size: 1px;
 
-    background-color: red;
+    background: #6ec3fa url('../img/small-profile-background.png') repeat-x;
+    background-size: cover;
+    @media screen and (min-width: 425px) {
+      background-size: contain;
+    }
 
     @include flex(column, center, center);
     width: 100%;
@@ -71,7 +76,6 @@
       a:visited {
         color: #000;
         font-weight: 700;
-        line-height: normal;
         text-decoration: none;
 
         svg {
@@ -84,6 +88,35 @@
     &:hover,
     &:focus {
       cursor: pointer;
+    }
+  }
+
+  // Navbar
+  &__navbar {
+    height: 78%;
+
+    ul {
+      @include flex(column, flex-start, flex-start);
+      gap: 8px;
+      height: 100%;
+
+      li {
+        margin-left: 20px;
+
+        svg {
+          vertical-align: middle;
+          margin-right: 15px;
+        }
+
+        &:nth-last-child(1) {
+          margin-bottom: 45px;
+          margin-top: auto;
+        }
+
+        &:first-child {
+          margin-top: 30px;
+        }
+      }
     }
   }
 }
