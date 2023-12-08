@@ -1,3 +1,5 @@
+
+
 let hideShowSideMenu = () => {
   let sideButton = document.getElementById('side-menu-button');
   var sideMenu = document.getElementById('side-menu');
@@ -17,3 +19,4 @@ let hideShowSideMenu = () => {
 
 document.getElementById('side-menu-button').onclick = hideShowSideMenu;
 document.getElementById('screenMapOverlay').onclick = hideShowSideMenu;
+
