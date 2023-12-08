@@ -337,6 +337,7 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
+
   top: 15;
   left: 15;
   padding: 0;
@@ -350,6 +351,7 @@ body {
 }
 .side-menu-button svg {
   color: #000;
+
 }
 
 .profile {
