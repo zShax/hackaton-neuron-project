@@ -1,16 +1,22 @@
-import { map } from '../index';
+
 
 let hideShowSideMenu = () => {
   let sideButton = document.getElementById('side-menu-button');
   var sideMenu = document.getElementById('side-menu');
 
-  if (sideMenu.style.display === 'block') {
-    sideMenu.style.display = 'none';
-    sideButton.style.left = '0%';
+  if (sideMenu.style.left === '0%') {
+    sideMenu.style.left = '-57%';
+    sideButton.style.left = '15px';
+    sideButton.style.color = '#00000';
   } else {
-    sideMenu.style.display = 'block';
-    sideButton.style.left = '57%';
+    sideMenu.style.left = '0%';
+    sideButton.style.left = '60%';
+    sideButton.style.color = '#007ec5';
   }
+
+  document.getElementById('screenMapOverlay').classList.toggle('hidden');
 };
 
 document.getElementById('side-menu-button').onclick = hideShowSideMenu;
+document.getElementById('screenMapOverlay').onclick = hideShowSideMenu;
+
