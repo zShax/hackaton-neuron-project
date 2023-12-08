@@ -158,9 +158,22 @@ body {
   width: 100%;
 }
 
-.menu {
-  display: none;
+.screen-map-overlay {
   position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, #282828, #1a1a1a);
+  opacity: 0.7;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  left: -57%;
   z-index: 10000;
   font-size: 14px;
   line-height: normal;
@@ -259,12 +272,13 @@ body {
   margin-top: 30px;
 }
 .menu__navbar > ul li a {
+  transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   color: #000;
   text-decoration: none;
   text-align: center;
 }
 .menu__navbar > ul li a:hover, .menu__navbar > ul li a:focus {
-  color: #515151;
+  color: #007ec5;
 }
 .menu__navbar .menu__navbar__dropdown-list {
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -317,13 +331,20 @@ body {
 }
 
 .side-menu-button {
+  transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  top: 10;
+  left: 10;
+  z-index: 10000;
   width: 50px;
   height: 50px;
-  background-color: transparent;
-  border: none;
+  border: 1px solid #000;
+  border-radius: 50px;
   outline: none;
-  z-index: 10000;
-  position: absolute;
+  background-color: transparent;
+}
+.side-menu-button svg {
+  color: #000;
 }
 
 .profile {
