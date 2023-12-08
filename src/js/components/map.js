@@ -39,6 +39,18 @@ function updateLocation() {
   markers.clearLayers();
 
   for (var i = 0; i < uwuArray.length; i++) {
+    vehicles[i].marker
+      .bindTooltip()
+      .setTooltipContent(
+        'Numar: ' +
+          vehicles[i].name +
+          '<br>' +
+          'Lat: ' +
+          vehicles[i].lat +
+          'Long: ' +
+          vehicles[i].lng
+      )
+      .openTooltip();
     //console.log(vehicles[i].marker);
     markers.addLayer(vehicles[i].marker);
     var lat = vehicles[i].lat;
