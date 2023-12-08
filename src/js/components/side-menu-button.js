@@ -1,16 +1,19 @@
 let hideShowSideMenu = () => {
+  let sideButton = document.getElementById('side-menu-button');
+  var sideMenu = document.getElementById('side-menu');
 
-    let sideButton = document.getElementById("side-menu-button");
-    var sideMenu = document.getElementById("side-menu");
+  if (sideMenu.style.left === '0%') {
+    sideMenu.style.left = '-57%';
+    sideButton.style.left = '10px';
+    sideButton.style.color = '#00000';
+  } else {
+    sideMenu.style.left = '0%';
+    sideButton.style.left = '58%';
+    sideButton.style.color = '#007ec5';
+  }
 
-    if (sideMenu.style.display === "block") {
-        sideMenu.style.display = "none";
-        sideButton.style.left = "0%";
-    } else {
-        sideMenu.style.display = "block";
-        sideButton.style.left = "57%";
-    }
-}
+  document.getElementById('screenMapOverlay').classList.toggle('hidden');
+};
 
-document.getElementById("side-menu-button").onclick = hideShowSideMenu;
-
+document.getElementById('side-menu-button').onclick = hideShowSideMenu;
+document.getElementById('screenMapOverlay').onclick = hideShowSideMenu;

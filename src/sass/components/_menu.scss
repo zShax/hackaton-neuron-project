@@ -1,7 +1,8 @@
 .menu {
-  //z-index: 1000;
-  display: none;
   position: absolute;
+  top: 0;
+  transition: left $transition-05;
+  left: -57%;
   z-index: 10000;
   font-size: 14px;
   line-height: normal;
@@ -130,13 +131,15 @@
         }
 
         a {
+          transition: $transition-025;
           color: #000;
           text-decoration: none;
           text-align: center;
 
           &:hover,
           &:focus {
-            color: #515151;
+            // color: #515151;
+            color: $secondary-blue;
           }
         }
       }

@@ -20,13 +20,17 @@
   <body>
     <!-- Main Map on Screen -->
     <main id="map" class="screen-map">
-      <!-- Menu -->
       <include src="./partials/side-menu-button.html"></include>
-      <include src="./partials/menu.html"></include>
-
-      <!-- Profile Section (hidden at first) -->
-      <include src="./partials/profile.html"></include>
     </main>
+
+    <!-- Menu -->
+    <include src="./partials/menu.html"></include>
+
+    <!-- Profile Section (hidden at first) -->
+    <include src="./partials/profile.html"></include>
+
+    <!-- Map overlay, backdrop filter -->
+    <div id="screenMapOverlay" class="screen-map-overlay hidden"></div>
 
     <!-- Index.js -->
     <script type="module" src="./js/index.js"></script>
