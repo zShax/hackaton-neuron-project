@@ -266,7 +266,6 @@ body {
 .menu__navbar > ul li a:hover, .menu__navbar > ul li a:focus {
   color: #515151;
 }
-
 .menu__navbar .menu__navbar__dropdown-list {
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
@@ -317,7 +316,6 @@ body {
   display: none;
 }
 
-
 .side-menu-button {
   width: 50px;
   height: 50px;
@@ -326,7 +324,6 @@ body {
   outline: none;
   z-index: 10000;
   position: absolute;
-
 }
 
 .profile {
@@ -445,5 +442,4 @@ body {
   margin-bottom: 4px;
   vertical-align: middle;
   color: #8f8f8f;
-
 }
