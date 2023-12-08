@@ -1,10 +1,11 @@
 function scheduleDropdown() {
   const dropdownButton = document.getElementById('dropdownButton');
-  const dropdownSchedule = document.getElementById('dropdownList');
+  const dropdownSchedule = document.getElementById(
+    'menu__navbar__dropdown-list'
+  );
 
   dropdownButton.classList.toggle('dropdownAnimation');
-  dropdownSchedule.classList.toggle('dropdownVisibility');
-  dropdownSchedule.classList.toggle('menu__navbar__dropdown-list');
+  dropdownSchedule.classList.toggle('dropdownAnimation');
 }
 
 document
