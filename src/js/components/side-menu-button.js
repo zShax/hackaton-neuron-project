@@ -1,11 +1,16 @@
 let hideShowSideMenu = () => {
-  var sideMenu = document.getElementById('side-menu');
 
-  if (sideMenu.style.display === 'none') {
-    sideMenu.style.display = 'block';
-  } else {
-    sideMenu.style.display = 'none';
-  }
-};
+    let sideButton = document.getElementById("side-menu-button");
+    var sideMenu = document.getElementById("side-menu");
 
-document.getElementById('side-menu-button').onclick = hideShowSideMenu;
+    if (sideMenu.style.display === "block") {
+        sideMenu.style.display = "none";
+        sideButton.style.left = "0%";
+    } else {
+        sideMenu.style.display = "block";
+        sideButton.style.left = "57%";
+    }
+}
+
+document.getElementById("side-menu-button").onclick = hideShowSideMenu;
+

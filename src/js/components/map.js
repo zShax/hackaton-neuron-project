@@ -8,7 +8,7 @@ uwuArray = [];
 
 let tramIcon = L.icon({
     iconUrl: require("../../img/orange-circle.png"),
-
+    // iconUrl: require("../../img/victorious.png"),
     iconSize:     [14, 14], // size of the icon
     iconAnchor:   [7, 7],   // point of the icon which will correspond to marker's location
 });
