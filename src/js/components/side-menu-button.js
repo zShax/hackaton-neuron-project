@@ -4,11 +4,11 @@ let hideShowSideMenu = () => {
 
   if (sideMenu.style.left === '0%') {
     sideMenu.style.left = '-57%';
-    sideButton.style.left = '10px';
+    sideButton.style.left = '15px';
     sideButton.style.color = '#00000';
   } else {
     sideMenu.style.left = '0%';
-    sideButton.style.left = '58%';
+    sideButton.style.left = '60%';
     sideButton.style.color = '#007ec5';
   }
 
